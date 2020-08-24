@@ -3,15 +3,25 @@ import {calculateWinner} from '../helper'
 import Board from "./Board";
 
 const TicTacToe = () => {
+  //hook for the history. initialize it with an array of 9 null values
   const [history, setHistory] = useState([Array(9).fill(null)]);
+  //hook for the step number
   const [stepNumber, setStepNumber] = useState(0);
+  //hook for when X goes next. initialized as true since X always goes first
   const [xIsNext, setXIsNext] = useState(true);
+  //if there's a winner it returns the winner. pass through the history of the most recent step
   const winner = calculateWinner(history[stepNumber]);
+  //for which turn it is. if its X's turn, return X, otherwise return O
   const xo = xIsNext ? "X" : "O";
 
+  //function to handle when a box gets clicked and update states. takes in the key of the box which is passed from
+  //Box to Board to here
   const handleClick = (i) => {
+    //gets the history from the first move to the most recent move +1
     const historyPoint = history.slice(0, stepNumber + 1);
+    //current spot
     const current = historyPoint[stepNumber];
+    //assigns every box up to the current 1 to rerender
     const boxes = [...current];
     if (winner || boxes[i]) return;
 
