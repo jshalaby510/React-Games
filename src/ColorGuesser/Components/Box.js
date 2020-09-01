@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const Box = ({ myKey, color, clicked }) => {
-    const [myColor, setMyColor] = useState(color);
     return (
         <button
-            style={{backgroundColor: myColor}}
+            style={{backgroundColor: color}}
             onClick={() => clicked(myKey)
             }
         />
