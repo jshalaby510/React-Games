@@ -14,7 +14,7 @@ function App() {
                 <Switch>
                     <Route path={"/"} exact component={Home}/>
                     <Route path={"/ColorGuesser"} component={ColorGuesser}/>
-                    <Route path={"/RandomColorPicker"} component={TicTacToe}/>
+                    <Route path={"/RandomColorPicker"} component={RandomColorPicker}/>
                     <Route path={"/TicTacToe"} component={TicTacToe}/>
                 </Switch>
             </Router>
