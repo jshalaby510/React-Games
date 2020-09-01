@@ -14,8 +14,6 @@ export function calculateWinner(squares) {
     for (let i = 0; i < lines.length; i++) {
         //assign a, b, and c to an entire row in lines
         const [a, b, c] = lines[i];
-        console.log(`a: ${a}, b: ${b}, c: ${c}`);
-        console.log(`squares[a]: ${squares[a]}, squares[b]: ${squares[b]}, squares[c]: ${squares[c]}`);
         //if a row is filled, a winning combination happened. return that they won
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
