@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import ColorGuesser from "./ColorGuesser/Components/ColorGuesser";
-import './ColorGuesser/CSS/ColorGuesser.css'
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorGuesser/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

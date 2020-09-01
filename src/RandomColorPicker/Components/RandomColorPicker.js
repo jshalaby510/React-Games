@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import '../CSS/RandomColorPicker.css';
 import Box from "./Box";
 
 function RandomColorPicker() {
@@ -14,10 +13,10 @@ function RandomColorPicker() {
     <>
         <h1 className={"rainbow-text"}>Pick a Color</h1>
 
-        <div className={"board"}>
+        <div className={"ColorBoard"}>
             {boxes}
             <h3>Your color is:</h3>
-            <p className={"hi"} style={{ color: color }}>{color}</p>
+            <h2 className={"hi"} style={{ color: color }}>{color}</h2>
         </div>
     </>
   );

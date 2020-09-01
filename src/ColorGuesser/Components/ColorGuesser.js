@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Box from "./Box";
 import RandomColor from 'randomcolor';
 
@@ -31,7 +31,7 @@ function ColorGuesser() {
     return (
         <>
             {displayWin()}
-            <div className={"board"}>
+            <div className={"ColorBoard"}>
                 {boxes}
             </div>
         </>

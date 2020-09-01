@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin: .5rem;
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -31,7 +31,17 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-.board {
+.TicTacToeBoard {
+    border: 1rem solid #920032;
+    background: #920032;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.ColorBoard {
     border: 1rem solid #000000;
     background: #000000;
     width: 600px;
@@ -87,8 +97,7 @@ li {
 }
 
 .hi {
-    font-family: Kefa;
-    margin: auto;
     text-align: center;
-    font-size: 25px;
+    margin: auto;
+    font-size: 2em;
 }
