@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {calculateWinner} from '../helper'
 import Board from "./Board";
+import NavBar from "../../NavBar";
 
 const TicTacToe = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -37,16 +38,19 @@ const TicTacToe = () => {
 
   return (
       <>
-        <h1>Tic Tac Toe</h1>
-        <Board boxes={history[stepNumber]} onClick={handleClick}/>
-        <div className={"info-wrapper"}>
-          <div>
-            <h3>History</h3>
-            {renderMoves()}
+        <NavBar/>
+        <div className={"gameBody"}>
+          <h1>Tic Tac Toe</h1>
+          <Board boxes={history[stepNumber]} onClick={handleClick}/>
+          <div className={"info-wrapper"}>
+            <div>
+              <h3>History</h3>
+              {renderMoves()}
+            </div>
+            <h3>{winner ? "Winner: " + winner : "Next Player: " + xo}</h3>
           </div>
-          <h3>{winner ? "Winner: " + winner : "Next Player: " + xo}</h3>
-        </div>
-        </>
+          </div>
+      </>
   );
 };
 

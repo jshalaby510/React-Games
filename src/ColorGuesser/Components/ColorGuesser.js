@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Box from "./Box";
+import NavBar from "../../NavBar";
 import RandomColor from 'randomcolor';
 
 const randomNumber = Math.floor(Math.random() * 9);
@@ -30,9 +31,12 @@ function ColorGuesser() {
 
     return (
         <>
-            {displayWin()}
-            <div className={"ColorBoard"}>
-                {boxes}
+            <NavBar/>
+            <div className={"gameBody"}>
+                {displayWin()}
+                <div className={"ColorBoard"}>
+                    {boxes}
+                </div>
             </div>
         </>
   );

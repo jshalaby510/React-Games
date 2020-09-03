@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Box from "./Box";
+import NavBar from "../../NavBar";
 
 function RandomColorPicker() {
     const [color, setColor] = useState(null);
@@ -10,15 +11,18 @@ function RandomColorPicker() {
     }
 
   return (
-    <>
-        <h1 className={"rainbow-text"}>Pick a Color</h1>
+      <>
+          <NavBar/>
+        <div className={"gameBody"}>
+            <h1 className={"rainbow-text"}>Pick a Color</h1>
 
-        <div className={"ColorBoard"}>
-            {boxes}
-            <h3>Your color is:</h3>
-            <h2 className={"hi"} style={{ color: color }}>{color}</h2>
+            <div className={"ColorBoard"}>
+                {boxes}
+                <h2 className={"hi"}>Your color is:</h2>
+                <h2 className={"hi"} style={{ color: color }}>{color}</h2>
+            </div>
         </div>
-    </>
+      </>
   );
 }
 

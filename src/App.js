@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from "./Home";
+import Home from "./Home/Home";
 import ColorGuesser from "./ColorGuesser/Components/ColorGuesser";
 import RandomColorPicker from "./RandomColorPicker/Components/RandomColorPicker";
 import TicTacToe from "./TicTacToe/components/TicTacToe";
