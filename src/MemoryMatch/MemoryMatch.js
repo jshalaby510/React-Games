@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Board from './Components/Board'
+import Board from './Components/Board';
 import Deck from './Components/Deck';
 import NavBar from "../NavBar";
 
@@ -16,7 +16,7 @@ export default function MemoryMatch () {
     const resetCards = () => {
         setFlipped([]);
         setDisabled(false);
-    }
+    };
 
     const resetEverything = () => {
         setFlipped([]);
@@ -26,7 +26,7 @@ export default function MemoryMatch () {
         setSolved([]);
         setDisabled(false);
         setBanner("Match Game");
-    }
+    };
 
     const sameCardClicked = id => flipped.includes(id);
 
@@ -34,11 +34,11 @@ export default function MemoryMatch () {
         const clickedCard = cards.find(card => card.id === id);
         const flippedCard = cards.find(card => flipped[0] === card.id);
         return flippedCard.type === clickedCard.type;
-    }
+    };
 
     const isWinner = () => {
         if (cards.length-2 === solved.length) setBanner("Winner!");
-    }
+    };
 
     const handleClick = id => {
         setDisabled(true);
@@ -62,18 +62,14 @@ export default function MemoryMatch () {
                 setTimeout(resetCards, 1000);
             }
         }
-    }
+    };
 
     const resizeBoard = () => {
         setDimension(Math.min(
             document.documentElement.clientWidth,
             document.documentElement.clientHeight
         ))
-    }
-
-    const preloadImages = () => {
-        cards.map(card => new Image().src = `/img/${card.type}.png`);
-    }
+    };
 
     useEffect(() => {
         resizeBoard();
@@ -81,13 +77,13 @@ export default function MemoryMatch () {
     }, []);
 
     useEffect(() => {
-        preloadImages();
-    }, [cards])
+        cards.map(card => new Image().src = `/img/${card.type}.png`);
+    }, [cards]);
 
     useEffect(() => {
         const resizeListener = window.addEventListener('resize', resizeBoard);
         return () => window.removeEventListener('resize', resizeListener);
-    })
+    });
 
     return (
         <>
