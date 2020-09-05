@@ -4,7 +4,7 @@ import NavBar from "../NavBar";
 import ColorGuesserPic from './Pics/ColorGuesserPic.png';
 import RandomColorPickerPic from './Pics/RandomColorPickerPic.png';
 import TicTacToePic from './Pics/TicTacToePic.png';
-
+import MemoryMatchPic from './Pics/MatchGamePic.png';
 
 function Home() {
     return (
@@ -25,8 +25,12 @@ function Home() {
 
                 <Link to={"/TicTacToe"}>
                     <img src={TicTacToePic} alt="Tic Tac Toe Pic" className={"homePics"}/>
+                    <h3>Tic Tac Toe</h3>
+                </Link>
 
-                    <h3>TicTacToe</h3>
+                <Link to={"/MemoryMatch"}>
+                    <img src={MemoryMatchPic} alt="Memory Match Pic" className={"homePics"}/>
+                    <h3>Memory Match</h3>
                 </Link>
             </div>
         </>

@@ -9,12 +9,6 @@ export default function NavBar() {
                 <Nav.Item as="li">
                     <Nav.Link href="/">Home</Nav.Link>
                 </Nav.Item>
-                {/*<Nav.Item as="li">*/}
-                {/*    <Nav.Link eventKey="link-1">About</Nav.Link>*/}
-                {/*</Nav.Item>*/}
-                {/*<Nav.Item as="li">*/}
-                {/*    <Nav.Link eventKey="link-2">Contact</Nav.Link>*/}
-                {/*</Nav.Item>*/}
             </Nav>
 
         </div>

@@ -18,6 +18,10 @@ function Home() {
                 <h3>TicTacToe</h3>
             </Link>
 
+            <Link to={"/MemoryMatch"}>
+                <h3>Memory Match</h3>
+            </Link>
+
         </>
     );
 }
