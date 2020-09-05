@@ -115,6 +115,8 @@ li {
     display: inline-block;
     border: 1px solid white;
     background: black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flip-container.flipped .flipper {
@@ -143,4 +145,19 @@ li {
 
 .front {
     transform: rotateY(180deg);
+}
+
+.resetButton {
+    float: right;
+    background-color: #d01641;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 50px;
+    cursor: pointer;
+    border-radius: 10px;
 }

@@ -2,10 +2,7 @@ function shuffle(array) {
     const arrayCopy = array.slice(0);
     for (let i=0; i<array.length-1; i++) {
         let randomIndex = Math.floor(Math.random() * (i+1));
-
-        let temp = arrayCopy[i];
-        arrayCopy[i] = arrayCopy[randomIndex];
-        arrayCopy[randomIndex] = temp;
+        [arrayCopy[i], arrayCopy[randomIndex]] = [arrayCopy[randomIndex], arrayCopy[i]];
     }
 
     return arrayCopy;
