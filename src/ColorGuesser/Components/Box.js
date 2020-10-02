@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Box = ({ myKey, color, clicked }) => {
+const Box = ({ id, color, handleClick }) => {
     return (
         <button
             style={{backgroundColor: color}}
-            onClick={() => clicked(myKey)
-            }
+            onClick={() => handleClick(id)}
         />
     )
 }

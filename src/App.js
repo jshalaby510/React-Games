@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from "./Home/Home";
-import ColorGuesser from "./ColorGuesser/Components/ColorGuesser";
+import ColorGuesser from "./ColorGuesser/ColorGuesser";
 import RandomColorPicker from "./RandomColorPicker/Components/RandomColorPicker";
 import TicTacToe from "./TicTacToe/components/TicTacToe";
 import MemoryMatch from "./MemoryMatch/MemoryMatch";
