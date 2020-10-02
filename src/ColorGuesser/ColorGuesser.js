@@ -18,6 +18,7 @@ const randomNumber = Math.floor(Math.random() * 9);
 
 function ColorGuesser() {
     const [boxes, setBoxes] = useState(initialize());
+    setBoxes(initialize());
     const [banner, setBanner] = useState(`Which color is: ${boxes[randomNumber].color}?`);
 
     const handleClick = (i) => {
